@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 /* Route::get('/users/import', 'UserimportController@show'); */
 Route::get('/users/import', [UserimportController::class, 'show']);
-Route::post('/users/import', [UserimportController::class, 'store']);
+Route::post('/users/import', [UserimportController::class, 'store'])->name('store');
 /* Route::post('/users/import', 'UserimportController@store'); */
 Auth::routes();
 
